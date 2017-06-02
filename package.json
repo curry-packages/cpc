@@ -1,0 +1,26 @@
+{
+    "name": "cpc",
+    "version": "0.0.1",
+    "author": "Julia Kunst",
+    "maintainer": "Michael Hanus <mh@informatik.uni-kiel.de>",
+    "synopsis": "Curry Program Coverage tool",
+    "category": [ "Programming" ],
+    "dependencies": {
+        "html": ">= 1.0.0"
+    },
+    "compilerCompatibility": {
+        "pakcs": ">= 1.14.0, < 2.0.0",
+        "kics2": ">= 0.5.0,  < 2.0.0"
+    },
+    "license": "BSD-3-Clause",
+    "licenseFile": "LICENSE",
+    "configModule": "CPC.PackageConfig",
+    "executable": {
+        "name": "cpc",
+        "main": "CPC.Main"
+    },
+    "source": {
+        "git": "https://git.ps.informatik.uni-kiel.de/curry-packages/cpc.git",
+        "tag": "$version"
+    }
+}

@@ -1,0 +1,23 @@
+#!/bin/sh
+# call currycheck with cpc instrumentation
+
+PROGRAMS=
+PROGRAMSPUBLIC=
+PROGRAMSPUBLICCURRY=
+PROGRAMSINS=
+
+for i in $*
+do
+  PROG=`expr $i : '\(.*\)\.curry' \| $i`
+  PROGRAMS="$PROGRAMS $PROG"
+  PROGRAMSPUBLIC="$PROGRAMSPUBLIC $PROG"_PUBLIC
+  PROGRAMSPUBLICCURRY="$PROGRAMSPUBLICCURRY $PROG"_PUBLIC.curry
+  PROGRAMSINS="$PROGRAMSINS $PROG"_PUBLIC_Instrumented.curry
+done
+
+MAIN=TEST
+
+curry check -k --mainprog=$MAIN $PROGRAMS
+cpc -c -t --main=$MAIN $PROGRAMSPUBLIC
+/bin/rm -f $PROGRAMSPUBLICCURRY $PROGRAMSINS "$MAIN".curry "$MAIN"_Instrumented.curry
+
