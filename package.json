@@ -19,6 +19,10 @@
         "name": "cpc",
         "main": "CPC.Main"
     },
+    "documentation": {
+        "src-dir": ".",
+        "main": "README.md"
+    },
     "source": {
         "git": "https://git.ps.informatik.uni-kiel.de/curry-packages/cpc.git",
         "tag": "$version"
