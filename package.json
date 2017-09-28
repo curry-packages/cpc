@@ -6,7 +6,8 @@
     "synopsis": "Curry Program Coverage tool",
     "category": [ "Programming" ],
     "dependencies": {
-        "html": ">= 1.0.0"
+        "abstract-curry": ">= 1.0.0",
+        "html"          : ">= 1.0.0"
     },
     "compilerCompatibility": {
         "pakcs": ">= 1.14.0, < 2.0.0",
