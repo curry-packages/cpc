@@ -25,7 +25,7 @@
         "main": "README.md"
     },
     "source": {
-        "git": "https://git.ps.informatik.uni-kiel.de/curry-packages/cpc.git",
+        "git": "https://github.com/curry-packages/cpc.git",
         "tag": "$version"
     }
 }
